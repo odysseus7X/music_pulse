@@ -64,7 +64,4 @@ features["momentum_score"] = (0.40 * features["view_velocity"] +0.30 * features[
 
 ranked = features.sort_values("momentum_score", ascending=False)
 
-print("\nTOP 10 SONGS\n")
-print(ranked[["title", "momentum_score", "view_velocity", "engagement_rate", "comment_rate", "recency_weight"]].head(10))
-
-ranked[["title", "momentum_score", "view_velocity", "engagement_rate", "comment_rate", "recency_weight"]].head(30).to_csv("momentum_ranking.csv", index=False)
+ranked[["title", "momentum_score", "view_velocity", "engagement_rate", "comment_rate", "recency_weight"]].head(10).to_csv("momentum_ranking.csv", index=False)
