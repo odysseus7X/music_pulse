@@ -43,8 +43,7 @@ for batch in chunk(song_ids, 10):
 
     url = "https://www.googleapis.com/youtube/v3/videos"
 
-    params = {
-        "key": API_KEY, "part": "snippet,statistics", "id": ",".join(batch)}
+    params = {"key": API_KEY, "part": "snippet,statistics", "id": ",".join(batch)}
 
     response = requests.get(url, params=params).json()
 
