@@ -18,7 +18,7 @@ First, I collected song statistics periodically and stored snapshots over time. 
 
 Calculated using the increase in views between two snapshots.
 
-### 2. Engagement Quality
+### 2. Engagement rate and comment rate
 
 Measures engagement based on new likes and comments relative to new views.
 
