@@ -65,4 +65,4 @@ for batch in chunk(song_ids, 10):
 df = pd.DataFrame(rows)
 
 df = df.drop_duplicates(subset=["song_id"])
-df.to_csv("tracked_songs.csv", index=False)
+df.to_csv("data/tracked_songs.csv", index=False)

@@ -8,7 +8,7 @@ load_dotenv()
 
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 
-tracked = pd.read_csv("tracked_songs.csv")
+tracked = pd.read_csv("data/tracked_songs.csv")
 
 song_ids = tracked["song_id"].tolist()
 
@@ -46,8 +46,8 @@ for batch in chunk(song_ids, 50):
 
 snapshot = pd.DataFrame(rows)
 
-if os.path.exists("snapshots.csv"):
-    old = pd.read_csv("snapshots.csv")
+if os.path.exists("data/snapshots.csv"):
+    old = pd.read_csv("data/snapshots.csv")
     snapshot = pd.concat([old, snapshot], ignore_index=True)
 
-snapshot.to_csv("snapshots.csv", index=False)
+snapshot.to_csv("data/snapshots.csv", index=False)

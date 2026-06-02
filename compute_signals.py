@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime, timezone
 
-df = pd.read_csv("snapshots.csv")
+df = pd.read_csv("data/snapshots.csv")
 
 df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
 df["published_at"] = pd.to_datetime(df["published_at"], utc=True)
