@@ -29,7 +29,7 @@ for song_id, group in df.groupby("song_id"):
 
     view_velocity = delta_views / hours_elapsed
 
-    engagement_rate = (curr["likes"] + curr["comments"]) / max(curr["views"], 1)
+    engagement_rate = (curr["likes"]) / max(curr["views"], 1)
 
     comment_rate = (curr["comments"]) / max(curr["views"], 1)
 
